@@ -1,0 +1,570 @@
+<!-- Redeveloped
+Lab: Software Engineering
+Exp:E-R Modeling from the Problem Statements
+File Name: er-diagram.html
+Author: Prakriti Dhang
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="./css/main.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jointjs/3.6.2/joint.css" />
+
+
+
+
+</head>
+
+<body>
+  <!-- <header id="header">
+    <div class="container-fluid p-3 ">
+      <div class="card">
+        <div class="row">
+          <div class="col-md-2">
+            <img src="images/vlabs-logo.png" class=" rounded img-fluid" alt="vlabs-logo">
+          </div>
+          <div class="col-md-8 p-4">
+            <p class="h2 fw-bold text-primary text-center"> Virtual Lab IIT Kharagpur</p>
+          </div>
+          <div class="col-md-2">
+            <img src="images/iitkgp-logo.png" class=" rounded img-fluid" alt="iitkgplogo">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container-fluid p-2 ">
+    <hr>
+    <p class="h3 fw-bold fst-italic text-center" style="color: #000283;">E-R Modeling from the Problem Statements</p>
+    <hr>
+  </div> -->
+
+  <div class="container-fluid mt-2 p-3">
+
+    <div class="d-flex flex-column justify-content-center mb-3 ">
+
+
+      <div class="card border border-2 border-primary p-2">
+        <div class="card-body">
+          <label class="form-label fw-bold fs-5">Select a problem from the dropdown list shown below</label>
+          <select id="selectex" class="form-select float-center border border-2 border-primary"
+            aria-label="Default select example" onchange="subex()">
+            <option value="0" selected>Exercise #</option>
+            <option value="1">Exercise 1</option>
+            <option value="2">Exercise 2</option>
+
+          </select>
+          <br>
+          <p class="fw-bold fs-6" id="para1" style="display: none;">Click submit to view solution</p>
+          <button type="button" class="btn btn-info border border-2 border-primary fw-bold" id="dispviewbtn"
+            onclick="viewsolutionb()" disabled>Submit</button>
+
+        </div> <!-- card body ended for select exercise div-->
+      </div> <!-- card ended for select exercise div-->
+
+
+
+
+
+      <!----------------------------------------Problem Statement Exercise 1-------------------------------------->
+
+      <div class="card border border-2 border-info p-2" id="exercise1" style="display:none;">
+        <div class="card-body">
+          <label for="prob1" class="form-label fs-5" style="color: brown; font-weight: bold; text-align: justify;">From
+            the following problem statement identify the possible entity sets, their attributes, and
+            relationships.</label>
+
+          <p class="fs-6" style="text-align: justify;">SE VLabs Inc. is a young company with a few departments spread
+            across the country.
+            As of now, the company has a strength of 200+ employees.
+
+            Each employee works in a department. While joining, a person has to provide a lot of personal and
+            professional
+            details including name, address, phone #, mail address, date of birth. Once all these information are
+            furnished,
+            a unique ID is generated for each employee. He is then assigned a department in which he will work.
+
+            There are around ten departments in the company. Unfortunately, two departments were given same names.
+            However,
+            departments too have ID's, which are unique.</p>
+
+
+
+
+          </ol>
+          <p><b>Note:</b> Try to use the features of the interface provided to capture as much details as possible.</p>
+
+
+        </div> <!-- card body ended for exercise 1 problem statment-->
+      </div> <!-- card ended for exercise 1 problem statement-->
+
+
+
+      <!----------------------------------------Problem Statement Exercise 1 complete-------------------------------------->
+
+      <!----------------------------------------Problem Statement Exercise 2-------------------------------------->
+
+      <div class="card border border-2 border-info p-2" id="exercise2" style="display:none;">
+        <div class="card-body">
+          <label for="prob2" class="form-label fs-5" style="color: brown; font-weight: bold; text-align: justify;">Draw
+            an ER diagram for the following problem:</label>
+
+          <p class="fs-6" style="text-align: justify;">The latest cab services <b>agency</b> in the city has approached you to
+            develop a Cab Management System for them. They would be using this software to efficiently manage and track
+            different cabs that are operated by them.
+          </p>
+          <p>The agency provides service from 8 AM to 8 PM. The agency can be uniquely identified by regestration
+            number,
+            and other identification can be name and address.</p>
+          <p>
+            <b>Cabs</b> are solely owned by the agency. They hire people in contracts to drive the cabs. A cab can be uniquely
+            identified by, like any other vehicle in the country, its license plate. A few different categories of cars
+            are available from different manufacturers. And a few of them are AC cars.
+          </p>
+          <p>
+           Cab <b>drivers</b> are given a identification card while joining. The ID card contains his name, permanent address,
+            phone number, date of joining, duration of contract. Also, an unique alphanumeric code is assigned to each
+            number.
+          </p>
+          <p>
+            Whenever any <b>passenger</b> books a cab, an available cab is allocated for him. The booking receipt given to the
+            passenger contains the car #, name, phone, source, destination.
+            Once he reaches the destination, he signs on a duplicate copy of the receipt and gives back to the driver.
+            Driver must submit this duplicate copy signed by the passenger at the agency for confirmation.
+          </p>
+          <p>
+            To evaluate their quality of service, the agency also wants a (optional) customer satisfaction survey,
+            where passengers can provide feedback about their journey through the agency's website.</p>
+
+
+
+
+         
+
+
+        </div> <!-- card body ended for exercise 2 problem statment-->
+      </div> <!-- card ended for exercise 2 problem statement-->
+
+
+
+      <!----------------------------------------Problem Statement Exercise 2 complete-------------------------------------->
+
+      <!------------------------------------------Exercise 1 -------------------------------------------->
+
+      <div class="card border border-2 border-success p-2" id="ex1" style="display:none;">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-9">
+
+              <!--------------------------------------------------------------- Table 1---------------------------------------------------------------->
+              <label for="table1" class="form-label fs-6" style=" font-weight: bold;">Table #1: Add Entities</label>
+              <form id="ftbl1" class="p-2 bg-white px-4" action="">
+                <div class="table-responsive">
+                  <table id="tbl1" class="table table-bordered  border border-1 border-info table-stripped">
+                    <thead>
+                      <th>Entity</th>
+                      <th>Weak</th>
+                      <th>Add</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><input class="form-control border-primary " type="text" id="inp1"></td>
+                        <td><input class="border-primary" type="checkbox" name="weakent" id="chkinp1" value="Weak"> Weak
+                        </td>
+                        <td style="text-align: center;"><button id="t1addbtn" class="btn btn-primary" type="button"
+                            onclick="addbtnt1()"><i class="bi bi-plus-lg"></i>Add</button></td>
+                      </tr>
+                    </tbody>
+
+                  </table>
+                </div> <!-- table 1 responsive div ended for exercise 1-->
+              </form>
+              <!------------------------------------------------------------Table 2-------------------------------------------------------------------------->
+              <label for="table2" class="form-label fs-6" style=" font-weight: bold;">Table #2: Add attributes for each
+                entity</label>
+              <form id="ftbl2" class="p-2 bg-white px-4" action="">
+                <div class="table-responsive">
+                  <table id="tbl2" class="table column-bordered-table table-bordered border border-1 border-info ">
+                    <thead>
+                      <th>Entity</th>
+                      <th>Attribute</th>
+                      <th>Primary Key</th>
+                      <th>Add</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <select id="selectentity" class="form-select float-center border border-2 border-primary"
+                            aria-label="Default select example">
+
+
+                          </select>
+                        </td>
+                        <td><input class="form-control border-primary " type="text" id="inp2"></td>
+                        <td><input class="border-primary" type="checkbox" id="chkinp2"> Primary Key</td>
+                        <td style="text-align: center;"><button id="t2addbtn" class="btn btn-primary" type="button"
+                            onclick="addbtnt2()"><i class="bi bi-plus-lg"></i>Add</button></td>
+                      </tr>
+                    </tbody>
+
+                  </table>
+                </div> <!-- table 2 responsive div ended for exercise 1-->
+              </form>
+
+              <!-------------------------------------------------------------- Table 3---------------------------------------------------------------------->
+
+              <label for="table3" class="form-label fs-6" style=" font-weight: bold;">Table #3: Define relationship
+                between two entities</label>
+              <form id="ftbl3" class="p-2 bg-white px-4" action="">
+                <div class="table-responsive">
+                  <table id="tbl3" class="table table-bordered  border border-1 border-info table-stripped">
+                    <thead>
+                      <th>Entity</th>
+                      <th>Relation</th>
+                      <th>Entity</th>
+                      <th>Constraint</th>
+                      <th>Add</th>
+
+                    </thead>
+                    <tbody>
+                      <td>
+                        <select id="selectent31" class="form-select float-center border border-2 border-primary"
+                          aria-label="Default select example">
+
+
+                        </select>
+                      </td>
+                      <td>
+                        <input class="form-control border-primary " type="text" id="inp3">
+                      </td>
+                      <td><select id="selectent32" class="form-select float-center border border-2 border-primary"
+                          aria-label="Default select example">
+
+
+                        </select></td>
+
+                      <td><select id="selectconst" class="form-select float-center border border-2 border-primary"
+                          aria-label="Default select example">
+                          <option value="M to M" selected>Many to Many</option>
+                          <option value="1 to M">One to Many</option>
+                          <option value="M to 1">Many to One</option>
+                          <option value="1 to 1">One to One</option>
+
+                        </select></td>
+                      <td style="text-align: center;"><button id="t3addbtn" class="btn btn-primary" type="button"
+                          onclick="addbtnt3()"><i class="bi bi-plus-lg"></i>Add</button></td>
+
+                    </tbody>
+
+                  </table>
+                </div> <!-- table 3 responsive div ended for exercise 1-->
+              </form>
+
+              <!----------------------------------------------------------------------- Table 4 ------------------------------------------------------------->
+
+              <label for="table4" class="form-label fs-6" style=" font-weight: bold;">Table #4: Entities and their
+                attributes</label>
+              <form id="ftbl4" class="p-2 bg-white px-4" action="">
+                <div class="table-responsive">
+                  <table id="tbl4" class="table table-bordered  border border-1 border-info ">
+                    <thead>
+                      <th>Entity</th>
+                      <th>Attributes</th>
+                      <th>Weak</th>
+
+                    </thead>
+                    <tbody id="tbodyt4">
+
+
+                    </tbody>
+
+                  </table>
+                </div> <!-- table 4 responsive div ended for exercise 1-->
+              </form>
+
+
+              <!---------------------------------------------------------------------- Table 5--------------------------------------------------------------->
+              <label for="table5" class="form-label fs-6" style=" font-weight: bold;">Table #5: Relationships between
+                entities</label>
+              <form id="ftbl5" class="p-2 bg-white px-4" action="">
+                <div class="table-responsive">
+                  <table id="tbl5" class="table table-bordered  border border-1 border-info table-stripped">
+                    <thead>
+                      <th>Entity</th>
+                      <th>Relation</th>
+                      <th>Entity</th>
+                      <th>Constraint Type</th>
+                      <th>Remove</th>
+
+                    </thead>
+                    <tbody id="tbodytbl5">
+
+                    </tbody>
+                  </table>
+                </div> <!-- table 5 responsive div ended for exercise 1-->
+
+                <td style="text-align: center;"><button id="drawbtn" class="btn btn-primary" type="button"
+                    onclick="drawbtnex21()"><i class="bi bi-pencil-fill"></i> Draw</button></td>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="dispuml1" class="card border border-2 border-primary" style="display:none;">
+        <div class="card-body">
+          <div id="er_diag_ex1">
+
+          </div>
+        </div>
+      </div>
+
+
+      
+      <!------------------------------------------Exercise 2 -------------------------------------------->
+
+      <div class="card border border-2 border-success p-2" id="ex2" style="display:none;">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-9">
+
+              <!--------------------------------------------------------------- Table 1---------------------------------------------------------------->
+              <label for="table21" class="form-label fs-6" style=" font-weight: bold;">Table #1: Add Entities</label>
+              <form id="ftbl21" class="p-2 bg-white px-4" action="">
+                <div class="table-responsive">
+                  <table id="tbl21" class="table table-bordered  border border-1 border-info table-stripped">
+                    <thead>
+                      <th>Entity</th>
+                      <th>Weak</th>
+                      <th>Add</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><input class="form-control border-primary " type="text" id="inp21"></td>
+                        <td><input class="border-primary" type="checkbox" id="chkinp21"></td>
+                        <td style="text-align: center;"><button id="t21addbtn" class="btn btn-primary" type="button"
+                            onclick="addbtnt21()"><i class="bi bi-plus-lg"></i>Add</button></td>
+                      </tr>
+                    </tbody>
+
+                  </table>
+                </div> <!-- table 1 responsive div ended for exercise 2-->
+              </form>
+              <!------------------------------------------------------------Table 2-------------------------------------------------------------------------->
+              <label for="table22" class="form-label fs-6" style=" font-weight: bold;">Table #2: Add attributes for each
+                entity</label>
+              <form id="ftbl22" class="p-2 bg-white px-4" action="">
+                <div class="table-responsive">
+                  <table id="tbl22" class="table column-bordered-table table-bordered border border-1 border-info ">
+                    <thead>
+                      <th>Entity</th>
+                      <th>Attribute</th>
+                      <th>Primary Key</th>
+                      <th>Add</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <select id="selectentity2" class="form-select float-center border border-2 border-primary"
+                            aria-label="Default select example">
+
+
+                          </select>
+                        </td>
+                        <td><input class="form-control border-primary " type="text" id="inp22"></td>
+                        <td><input class="border-primary" type="checkbox" id="chkinp22"></td>
+                        <td style="text-align: center;"><button id="t22addbtn" class="btn btn-primary" type="button"
+                            onclick="addbtnt22()"><i class="bi bi-plus-lg"></i>Add</button></td>
+                      </tr>
+                    </tbody>
+
+                  </table>
+                </div> <!-- table 2 responsive div ended for exercise 2-->
+              </form>
+
+              <!-------------------------------------------------------------- Table 3---------------------------------------------------------------------->
+
+              <label for="table23" class="form-label fs-6" style=" font-weight: bold;">Table #3: Define relationship
+                between two entities</label>
+              <form id="ftbl23" class="p-2 bg-white px-4" action="">
+                <div class="table-responsive">
+                  <table id="tbl23" class="table table-bordered  border border-1 border-info table-stripped">
+                    <thead>
+                      <th>Entity</th>
+                      <th>Relation</th>
+                      <th>Entity</th>
+                      <th>Constraint</th>
+                      <th>Add</th>
+
+                    </thead>
+                    <tbody>
+                      <td>
+                        <select id="selectentt31b" class="form-select float-center border border-2 border-primary"
+                          aria-label="Default select example">
+
+
+                        </select>
+                      </td>
+                      <td>
+                        <!--input class="form-control border-primary " type="text" id="inp23"-->
+                        <select id="selectrel3" class="form-select float-center border border-2 border-primary"
+                          aria-label="Default select example">
+                          <option value="0" selected>Select Relation</option>
+                          <option value="1">Books</option>
+                          <option value="2">Drives</option>
+                          <option value="3">Hires</option>
+                          <option value="4">Owns</option>
+                          <option value="5">Return</option>
+                          <option value="6">Submit</option>
+
+                        </select>
+                      </td>
+                      <td><select id="selectentt32b" class="form-select float-center border border-2 border-primary"
+                          aria-label="Default select example">
+
+
+                        </select></td>
+
+                      <td><select id="selectconst3b" class="form-select float-center border border-2 border-primary"
+                          aria-label="Default select example">
+                          <option value="M to M" selected>Many to Many</option>
+                          <option value="1 to M">One to Many</option>
+                          <option value="M to 1">Many to One</option>
+                          <option value="1 to 1">One to One</option>
+
+                        </select></td>
+                      <td style="text-align: center;"><button id="t23addbtn" class="btn btn-primary" type="button"
+                          onclick="addbtnt23()"><i class="bi bi-plus-lg"></i>Add</button></td>
+
+                    </tbody>
+
+                  </table>
+                </div> <!-- table 3 responsive div ended for exercise 2-->
+              </form>
+
+              <!----------------------------------------------------------------------- Table 4 ------------------------------------------------------------->
+
+              <label for="table24" class="form-label fs-6" style=" font-weight: bold;">Table #4: Entities and their
+                attributes</label>
+              <form id="ftbl24" class="p-2 bg-white px-4" action="">
+                <div class="table-responsive">
+                  <table id="tbl24" class="table table-bordered  border border-1 border-info ">
+                    <thead>
+                      <th>Entity</th>
+                      <th>Attributes</th>
+                      <th>Weak</th>
+
+                    </thead>
+                    <tbody id="tbodyex2t4">
+
+
+                    </tbody>
+
+
+                  </table>
+                </div> <!-- table 4 responsive div ended for exercise 2-->
+              </form>
+
+
+              <!---------------------------------------------------------------------- Table 5--------------------------------------------------------------->
+              <label for="table25" class="form-label fs-6" style=" font-weight: bold;">Table #5: Relationships between
+                entities</label>
+              <form id="ftbl25" class="p-2 bg-white px-4" action="">
+                <div class="table-responsive">
+                  <table id="tbl25" class="table table-bordered  border border-1 border-info table-stripped">
+                    <thead>
+                      <th>Entity</th>
+                      <th>Relation</th>
+                      <th>Entity</th>
+                      <th>Constraint Type</th>
+                      <th>Remove</th>
+
+                    </thead>
+                    <tbody id="tbodytbl25">
+
+                    </tbody>
+                  </table>
+                </div> <!-- table 5 responsive div ended for exercise 2-->
+
+                <td style="text-align: center;"><button id="drawbtn2" class="btn btn-primary" type="button"
+                    onclick="drawbtnex22()" ><i class="bi bi-pencil-fill"></i> Draw</button></td>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="dispuml2" class="card border border-2 border-primary" style="display:none;">
+        <div class="card-body">
+          <div id="er_diag_ex2">
+
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-------------------------------------------------------------Result Display----------------------------------------------------------------->
+
+
+      <div class="card border border-2 border-warning p-2" id="dispres" style="display:none;">
+        <div class="card-body">
+          <label for="result" class="form-label fs-4" style="color: brown; font-weight: bold;">Solution</label>
+          <div style="font-size: medium;" id="show_result1" style=" display: none;">
+
+            <img src="./images/solution_ex_1.png" class="img-fluid" alt="er-diagram-solution">
+
+
+
+
+          </div>
+          <div style="font-size: medium;" id="show_result2" style=" display: none;">
+
+            <img src="./images/solution_ex_2.png" class="img-fluid" alt="er-diagram-solution">
+
+
+
+
+          </div>
+          <br>
+          <button type="button" class="btn btn-info border-primary" id="viewsol" onclick="solview()" disabled>View
+            Solution</button>
+        </div> <!-- Card body ended for result display-->
+      </div> <!-- Card  ended for result display-->
+
+
+
+    </div> <!--- d-Flex ended-->
+  </div> <!-- container-fluid ended-->
+
+
+  <!-- <div class="container-fluid p-1 ">
+    <hr>
+    <footer class="text-white text-center">
+
+      <p class="text-primary fs-5 text-center"> Copyright © 2023 IIT Kharagpur, <a
+          class="text-primary fs-5 text-center " href="http://vlabs.iitkgp.ac.in/">Virtual Lab</a></p>
+
+    </footer>
+    <hr>
+  </div> -->
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/ex2.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.4.1/backbone.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jointjs/3.6.5/joint.js"></script>
+</body>
+
+</html>

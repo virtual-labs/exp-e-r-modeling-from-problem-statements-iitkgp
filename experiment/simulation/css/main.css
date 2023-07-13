@@ -1,1 +1,123 @@
-/* You CSS goes in here */
+/*Redeveloped
+Lab: Software Engineering
+Exp:E-R Modeling from the Problem Statements
+File Name: main.css
+Author: Prakriti Dhang */
+
+html {
+    position: relative;
+    min-height: 100%;
+  }
+
+  body {
+    /* Margin bottom by footer height */
+    margin-bottom: 100px;
+   
+  }
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.table-hover  tr:hover th, .table-hover  tr:hover td {
+    background-color: #c8e4fffa;
+    
+}
+
+
+.table thead{
+    background-color: #1536a1fa;
+    font-weight: bold;
+    text-align: center;
+    color: azure;
+}
+
+
+
+.column-bordered-table td {
+  
+  border-right: 1px solid #1addff;
+}
+
+
+
+div.divscroll {
+   
+    height: 500px;
+    overflow-y: scroll;
+  }
+
+.card{
+    margin-bottom: 10px;
+    
+    
+}
+.card-body{
+   background-color: transparent;
+}
+
+.img-container{
+  display:inline-block;
+  position: relative;
+}
+/*.poscol{
+  width: 100%;
+  min-width: 23px;
+  min-height: 1px;
+  }
+  
+  .poscol img{
+    max-width: 100%;
+    height: auto;
+  }*/
+
+#img1{
+  position:absolute ;
+  top:10%;
+  left:10%;
+  width: 40%;
+ 
+ 
+}
+
+/*#img2{
+  position: absolute;
+  top:18%;
+  left:9%;
+  width:95%;
+ 
+}
+
+#img3{
+  position: relative;
+  top:13.5%;
+  left:90%;
+  width:90%;
+  
+}
+
+#img4{
+  position: absolute;
+  top:10%;
+  left:170%;
+  width:95%;
+ 
+}
+
+#img5{
+  position: absolute;
+  top:142%;
+  left:24%;
+  width:95%;
+ 
+}
+
+#img6{
+  position: absolute;
+  top:142%;
+  left:150%;
+  width:95%;
+ 
+}*/
