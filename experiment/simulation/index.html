@@ -1,13 +1,469 @@
+
+<!--Redeveloped
+Lab: Software Engineering
+Exp:E-R Modeling from the Problem Statements
+File Name: index.html
+Author: Prakriti Dhang -->
+
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Add CSS at the head of HTML file -->
     <link rel="stylesheet" href="./css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!--link rel="styleshee" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"-->
+    <link rel="stylesheet" href="./css/css/fontawesome.css">
+    <link rel="stylesheet" href="./css/css/all.min.css">
+    
+   
+
+
+
+
+
 </head>
 <body>
-		<!-- Your code goes here-->
+   <!--  <header id="header">
+        <div class="container p-3">
+          <div class="card">
+          <div class="row">
+            <div class="col-md-2">
+            <img src="images/vlabs-logo.png" class=" rounded img-fluid" alt="vlabs-logo" >
+          </div>
+          <div class="col-md-8 p-4">
+            <p class="h2 fw-bold text-primary text-center"> Virtual Lab IIT Kharagpur</p>
+          </div>
+          <div class="col-md-2">
+            <img src="images/iitkgp-logo.png" class=" rounded img-fluid" alt="iitkgplogo" >
+          </div>
+          </div>
+        </div>
+        </div>
+      </header>
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+      <div class="container p-2">
+        <hr>
+        <p class="h3 fw-bold fst-italic text-center" style="color: #000283;"> E-R Modeling from the Problem Statements</p>
+        <hr>
+    </div> -->
+
+    <div class="container mt-2 p-3">
+		
+        <div class="d-flex flex-column justify-content-center mb-3 ">  
+            <div class="row">
+                <div class="col-md-4">
+                   <p class="fs-5 fw-bold" style="color: brown;">Draw an ER diagram for a School Management System based on the following information.</p>
+                   <p style="text-align: justify;"> You have been asked to implement a database for a school management system (SMS). This primarily consists of 
+                    maintaining students' information like name, address, date of birth, roll number, deparment, and so on. 
+                    Details about the school to be stored includes school's name, location. Although it is unlikely that there
+                     would be two schools at the same place with same name, 
+                    but our SMS would like to accomodate this possibility.
+                   </p>
+                   <p style="text-align: justify;">Faculty members works in the school. They teaches the students. A faculty member normally teaches multiple
+                     students at a time. Also, he can teach multiple courses to the students.</p>
+                </div>
+               
+                <div class="col-md-8">
+                  
+                  <div class="p-2 border-start" >
+                    <div class="card-body">
+                    <!--div class="main"-->
+                    <div  class="card card-body border border-1 border-info" id="p1">
+                     
+                        <h5 id="head1" class="card-title fs-5 fw-bold fst-italic border border-3 border-primary rounded-3 p-2" style="display:block;  text-align: center; background: linear-gradient(to bottom right, #ccffff 0%, #ffffff 99%);">E R Diagram for School Management System</h5>
+                       
+                      </div>     
+                      <!--div class="d-flex flex-column"-->
+                      <div  class=" card card-body border border-2 border-primary p-2">
+                       <!--div class="row">
+                        <div class="col-md-2"-->
+               
+                       
+                          <div class="d-grid gap-2 d-flex flex-row  ">
+                          <p class="fs-5 fw-bold" >Step</p>
+                         
+                          <button id="stp1" type="button" class="btn border border-2 border-primary rounded-5 " style="background-color:#ccffff;" disabled onclick="gostep1()">
+                          <i class="fa-solid fa-square-1" >1</i></button>
+                          <button id="stp2" type="button" class="btn border border-2 border-primary rounded-5" style="background-color:#ccffff; display:none;" disabled onclick="gostep2()">
+                            <i class="fa-solid fa-square-2" >2</i></button>
+                          <button id="stp3" type="button" class="btn border border-2 border-primary rounded-5" style="background-color:#ccffff; display:none;" disabled onclick="gostep3()">
+                              <i class="fa-solid fa-square-3" >3</i></button>
+                          <button id="stp4" type="button" class="btn  border border-2 border-primary rounded-5" style="background-color:#ccffff;display:none; " disabled onclick="gostep4()">
+                                <i class="fa-solid fa-square-4" >4</i></button>
+                          <button id="stp5" type="button" class="btn border border-2 border-primary rounded-5" style="background-color:#ccffff; display:none;" disabled onclick="gostep5()">
+                                  <i class="fa-solid fa-square-5" >5</i></button>
+                                </div>
+                                </div>
+                                <!--/div-->
+<!--/div>
+<div class="col-md-10 poscol"-->
+  
+  <!--div class=" card card-body border border-2 border-primary" -->
+                         <div id="p11" class="fs-5 card card-body border border-2 border-primary" style="display:none; ">
+                          <p> We will follow the steps shown below to draw the ER diagram </p>
+                           <ol class="fs-5  list-group-numbered">
+                            <li class="list-group-item" id="s1" style="display:none;">Identify sets and their attributes</li>
+                            <li class="list-group-item" id="s2" style="display:none;">Draw the entities</li>
+                            <li class="list-group-item" id="s3" style="display:none;">Identify relationships</li>
+                            <li class="list-group-item" id="s4" style="display:none;">Draw the relationships</li>
+                            <li class="list-group-item" id="s5" style="display:none;">Identify mapping cardinalities and represent them</li>
+                           </ol>
+                           <div class="d-grid gap-2  d-md-flex justify-content-md-end p-2" >
+                             <!--button id="prebtn" type="button" class="btn btn-warning" onclick="goback()" style="display:none;" disabled>
+                      <i class="fas fa-chevron-left fa-lg"></i></button-->
+                           <button id="nextbtn" type="button" class="btn btn-primary float-right " onclick="gonext()" style="display:block;" disabled><i class="fas fa-chevron-right fa-lg"></i></button>
+                         </div>
+                          </div>
+                          <!--/div-->
+                          
+                       <div id="p2" class="fs-5 card card-body border border-2 border-primary" style="display:none;">
+                           <ul class="fs-5 list-group"> 
+                            <li  id="s1a" class="list-group-item" style="display:none;">&#x2022; One of the primary entities interacting with SMS is student</li>
+                            <li  id="s1b" class="list-group-item"  style="display:none;">&#x2022; Attributes of a student includes name, address, date of birth, roll, department</li>
+                            <li  id="s1c" class="list-group-item" style="display:none;">&#x2022; Roll number can uniquely identify a student; hence, it is the primary key.</li>
+                            
+                          </ul>
+                          <div class="d-grid gap-2  d-md-flex justify-content-md-end p-2" >
+                             <!--button id="prebtn1" type="button" class="btn btn-warning" onclick="goback1()" style="display:block;" disabled>
+                      <i class="fas fa-chevron-left fa-lg"></i></button-->
+                           <button id="nextbtn1" type="button" class="btn btn-primary float-right " onclick="gonext1()" style="display:block;" disabled><i class="fas fa-chevron-right fa-lg"></i></button>
+                         </div>
+                       </div>
+
+                        <div id="p3" class="fs-5 card card-body border border-2 border-primary" style="display:none;">
+                          <ul class="fs-5 list-group"  style="list-style-type:disc;">
+                           <li  id="s1d" class="list-group-item"  style="display:none;">&#x2022; Next entity is school</li>
+                           <li  id="s1e" class="list-group-item" style="display:none;">&#x2022; Attributes are: name, location, id</li>
+                           <li  id="s1f" class="list-group-item" style="display:none;">&#x2022; Id can uniquely identify a school. So, its the primary key for school.</li>
+                           
+                         </ul>
+                         <div class="d-grid gap-2  d-md-flex justify-content-md-end p-2" >
+                          <!--button id="prebtn2" type="button" class="btn btn-warning" onclick="goback2()" style="display:block;" disabled>
+                   <i class="fas fa-chevron-left fa-lg"></i></button-->
+                        <button id="nextbtn2" type="button" class="btn btn-primary float-right " onclick="gonext2()" style="display:block;" disabled><i class="fas fa-chevron-right fa-lg"></i></button>
+                      </div>
+                        </div>
+
+                       <div id="p4" class="fs-5 card card-body border border-2 border-primary" style="display:none;">
+                        <ul class="fs-5 list-group" style="list-style-type:disc;"> 
+                         <li  id="s1g" class="list-group-item" style="display:none;">&#x2022; Faculty is our next entity</li>
+                         <li  id="s1h" class="list-group-item" style="display:none;">&#x2022; Possible attributes are: name, address, date of joining.</li>
+                         <li  id="s1i" class="list-group-item" style="display:none;">&#x2022; It is quite likely that there are multiple faculties with the same date. 
+                          Its also likely that they would join on the same date. Therefore, we add another attritubute, id, to uniquely identify a faculty member.</li>
+                         
+                       </ul>
+
+                       <div class="d-grid gap-2  d-md-flex justify-content-md-end p-2" >
+                        <!--button id="prebtn3" type="button" class="btn btn-warning" onclick="goback3()" style="display:block;" disabled>
+                 <i class="fas fa-chevron-left fa-lg"></i></button-->
+                      <button id="nextbtn3" type="button" class="btn btn-primary float-right " onclick="gonext3()" style="display:block;" disabled><i class="fas fa-chevron-right fa-lg"></i></button>
+                    </div>
+                       </div>
+                 
+                     <div id="p5" class="fs-5 card card-body border border-2 border-primary" style="display:none;">
+                      <ul class="fs-5 list-group" style="list-style-type:disc;"> 
+                       <li  id="s1j" class="list-group-item" style="display:none;">&#x2022; Our final entity of concern is course</li>
+                       <li  id="s1k" class="list-group-item" style="display:none;">&#x2022; Possible attributes are: id, title, credits</li>
+                       <li  id="s1l" class="list-group-item" style="display:none;">&#x2022; Id is the primary key.</li>
+                       <br>
+                       <p id="s1m" class="fs-5" style="display:none;"> Having identified teh entity sets and their attributes, let's represent them in an ER diagram.</p>
+                       
+                     </ul>
+
+                     <div class="d-grid gap-2  d-md-flex justify-content-md-end p-2" >
+                      <!--button id="prebtn4" type="button" class="btn btn-warning" onclick="goback4()" style="display:block;" disabled>
+               <i class="fas fa-chevron-left fa-lg"></i></button-->
+                    <button id="nextbtn4" type="button" class="btn btn-primary float-right " onclick="gonextstep2()" style="display:block;" disabled><i class="fas fa-chevron-right fa-lg"></i></button>
+                  </div>
+                     </div>
+                     <!--div class="card card-body border border-2 border-primary " style="height: 250px;" >
+                     <div  id="p6"   style="display:block; ">
+                      <div class="img-container">
+                      <img id="img1" class="card-img-top" style="display:block;" src="./images/studenter.png">
+                      <img id="img2" class="img-fluid card-img" style="display:none;" src="./images/name.png">
+                      <img id="img3" class="img-fluid card-img" style="display:none;" src="./images/address.png">
+                      <img id="img4" class="img-fluid card-img" style="display:none;" src="./images/roll.png">
+                      <img id="img5" class="img-fluid card-img" style="display:none;" src="./images/dob.png">
+                      <img id="img6" class="img-fluid card-img" style="display:none;" src="./images/dept.png">
+                    </div>
+                   
+                  </div>
+                  
+                        <div id="primarykey1" class="card card-body border border-1 border-primary" style="width:18rem;display:none; ">
+                          <p class="fs-5 fw-bold">Roll* is the Primary key</p>
+                        </div>
+                      </div-->
+ <!---------------------------------------------------step 2--------------------------------------->
+                      <div id="p6" class="card border border-2 border-primary p-2" style="display:none; ">
+                        <div class="row g-3">
+                          <div class="col-md-5"> 
+                            <img src="./images/studenter.png" class="img-fluid rounded-start" >
+                          </div>
+                          <div class="col-md-7">
+                        <div id="primarykey1" class="card-body border border-2 border-primary rounded-3" style="display:none; background: linear-gradient(to bottom right, #ccffff 0%, #ffffff 99%);">
+                          <h5   class="card-title" >Roll* is the Primary key </h5>
+                          
+                          
+                        </div>
+                      </div>
+                      </div>
+                      <div class="d-grid gap-2  d-md-flex justify-content-md-end p-2" >
+                        <!--button id="prebtn5" type="button" class="btn btn-warning" onclick="goback5()" style="display:block;" disabled>
+                 <i class="fas fa-chevron-left fa-lg"></i></button-->
+                      <button id="nextbtn5" type="button" class="btn btn-primary float-right " onclick="gonext2a()" style="display:block;" disabled><i class="fas fa-chevron-right fa-lg"></i></button>
+                    </div>
+                      </div>
+                    
+                      <div id="p7" class="card border border-2 border-primary p-2" style="display:none; ">
+                        <div class="row g-3">
+                          <div class="col-md-5">
+                            <img src="./images/school.png" class="img-fluid rounded-start" >
+                          </div>
+                          <div class="col-md-7">
+                        <div id="primarykey2"  class="card-body border border-2 border-primary rounded-3" style="display:none; background: linear-gradient(to bottom right, #ccffff 0%, #ffffff 99%);">
+                          <h5  class="card-title" >Id* is the Primary key </h5>
+                          
+                          
+                        </div>
+                      </div>
+                      </div>
+
+                      <div class="d-grid gap-2  d-md-flex justify-content-md-end p-2" >
+                        <!--button id="prebtn6" type="button" class="btn btn-warning" onclick="goback6()" style="display:block;" disabled>
+                 <i class="fas fa-chevron-left fa-lg"></i></button-->
+                      <button id="nextbtn6" type="button" class="btn btn-primary float-right " onclick="gonext2b()" style="display:block;" disabled><i class="fas fa-chevron-right fa-lg"></i></button>
+                    </div>
+                      </div>
+
+                      <div id="p8" class="card border border-2 border-primary p-2" style="display:none; ">
+                        <div class="row g-3">
+                          <div class="col-md-5">
+                            <img src="./images/faculty.png" class="img-fluid rounded-start" >
+                          </div>
+                          <div class="col-md-7">
+                        <div id="primarykey3"  class="card-body border border-2 border-primary rounded-3" style="display:none; background: linear-gradient(to bottom right, #ccffff 0%, #ffffff 99%);">
+                          <h5  class="card-title" >Id* is the Primary key </h5>
+                          
+                          
+                        </div>
+                      </div>
+                      </div>
+
+                      <div class="d-grid gap-2  d-md-flex justify-content-md-end p-2" >
+                        <!--button id="prebtn7" type="button" class="btn btn-warning" onclick="goback7()" style="display:block;" disabled>
+                 <i class="fas fa-chevron-left fa-lg"></i></button-->
+                      <button id="nextbtn7" type="button" class="btn btn-primary float-right " onclick="gonext2c()" style="display:block;" disabled><i class="fas fa-chevron-right fa-lg"></i></button>
+                    </div>
+                      </div>
+                    
+                      <div id="p9" class="card border border-2 border-primary p-2" style="display:none; ">
+                        <div class="row g-3">
+                          <div class="col-md-5">
+                            <img src="./images/course.png" class="img-fluid rounded-start" >
+                          </div>
+                          <div class="col-md-7">
+                        <div id="primarykey4" class="card-body border border-2 border-primary rounded-3" style="display:none; background: linear-gradient(to bottom right, #ccffff 0%, #ffffff 99%);">
+                          <h5   class="card-title" >Id* is the Primary key </h5>
+                          
+                          
+                        </div>
+                      </div>
+                      </div>
+                      <div class="d-grid gap-2  d-md-flex justify-content-md-end p-2" >
+                        <!--button id="prebtn8" type="button" class="btn btn-warning" onclick="goback8()" style="display:block;" disabled>
+                 <i class="fas fa-chevron-left fa-lg"></i></button-->
+                      <button id="nextbtn8" type="button" class="btn btn-primary float-right " onclick="gonextstep3()" style="display:block;" disabled><i class="fas fa-chevron-right fa-lg"></i></button>
+                    </div>
+                      </div>
+                     <!-------------------------------------------------------------- step 3-------------------------------------->
+                      <div id="p10" class="fs-5 card card-body border border-2 border-primary" style="display:none;">
+                        <p class="fs-5 fst-italic">We have identified our entity sets. Let's now try
+                          to figure out possible relationships among them.
+                        </p>
+                        <ul id="ir1" class="fs-5 list-group" style="display:none;">
+                         <li   class="list-group-item" style="display:block;">&#x2022; Between student and school:</li>
+                         <ul>
+                         <li   class="list-group-item" style="display:block;">&#x2022; Student studies in school</li>
+                        </ul>
+                         
+                       </ul>
+                       <ul id="ir2" class="fs-5 list-group" style="display:none;">
+                        <li   class="list-group-item" style="display:block;">&#x2022; Between faculty and school:</li>
+                        <ul>
+                        <li   class="list-group-item" style="display:block;">&#x2022; Faculty works in school</li>
+                       </ul>
+                        
+                      </ul>
+                      <ul id="ir3" class="fs-5 list-group" style="display:none;">
+                        <li   class="list-group-item" style="display:block;">&#x2022; Between faculty and course:</li>
+                        <ul>
+                        <li   class="list-group-item" style="display:block;">&#x2022; Faculty teaches course</li>
+                       </ul>
+                        
+                      </ul>
+
+                      <ul id="ir4" class="fs-5 list-group" style="display:none;">
+                        <li   class="list-group-item" style="display:block;">&#x2022; Between student and course:</li>
+                        <ul>
+                        <li   class="list-group-item" style="display:block;">&#x2022; Student takes course</li>
+                       </ul>
+                        
+                      </ul>
+
+                      <div id="entityrel" class="card card-body border border-2 border-primary" style="display:none; background: linear-gradient(to bottom right, #ccffff 0%, #ffffff 99%);">
+                        <p class="fs-5 fst-italic"> Now we will represent the entity sets, attributes and relationships
+                           identified so far in an ER diagram.</p>
+                      </div>
+                      <div class="d-grid gap-2  d-md-flex justify-content-md-end p-2" >
+                        <!--button id="prebtn9" type="button" class="btn btn-warning" onclick="goback9()" style="display:block;" disabled>
+                 <i class="fas fa-chevron-left fa-lg"></i></button-->
+                      <button id="nextbtn9" type="button" class="btn btn-primary float-right " onclick="gonextstep4()" style="display:block;" disabled><i class="fas fa-chevron-right fa-lg"></i></button>
+                    </div>
+                       </div>
+ <!---------------------------------------------------------- step 4--------------------------------------------------------------------->
+                       <div id="p111" class="card border border-2 border-primary p-2" style="display:none; ">
+                        <div class="row g-3">
+                          <div class="col-md-12">
+                            <img src="./images/drawerdg.png" class="img-fluid rounded-start" >
+                          </div>
+                          <div class="col-md-7">
+                            <div id="mappingrel" class="card-body border border-2 border-primary rounded-3" style="display:none; background: linear-gradient(to bottom right, #ccffff 0%, #ffffff 99%);">
+                              <h5   class="card-title fst-italic" >Having represented the relationships, lets now mark
+                              the mapping cardinalities for each relationaship.</h5>
+                              
+                            </div>
+                          </div>
+                      </div>
+                      <div class="d-grid gap-2  d-md-flex justify-content-md-end p-2" >
+                        <!--button id="prebtn10" type="button" class="btn btn-warning" onclick="goback10()" style="display:block;" disabled>
+                 <i class="fas fa-chevron-left fa-lg"></i></button-->
+                      <button id="nextbtn10" type="button" class="btn btn-primary float-right " onclick="gonextstep5()" style="display:block;" disabled><i class="fas fa-chevron-right fa-lg"></i></button>
+                    </div>
+                      </div>
+                      <!----------------------------------------------------- step 5------------------------------------------------->
+
+                      <div id="p12" class="card border border-2 border-primary p-2" style="display:none; ">
+                        <div class="row g-3">
+                          <div class="col-md-12">
+                            <img src="./images/studschl.png" class="img-fluid rounded-start" >
+                          </div>
+                          <div class="col-md-7">
+                            <div id="stdschool" class="card-body border border-2 border-primary rounded-3" style="display:none; background: linear-gradient(to bottom right, #ccffff 0%, #ffffff 99%);">
+                              <h5   class="card-title fst-italic" >A student studies only in one school, but many students can study in a given school.</h5>
+                              
+                            </div>
+                          </div>
+                      </div>
+                      <div class="d-grid gap-2  d-md-flex justify-content-md-end p-2" >
+                        <!--button id="prebtn11" type="button" class="btn btn-warning" onclick="goback11()" style="display:block;" disabled>
+                 <i class="fas fa-chevron-left fa-lg"></i></button-->
+                      <button id="nextbtn11" type="button" class="btn btn-success float-right " onclick="gonext5a()" style="display:block;" disabled><i class="fas fa-chevron-right fa-lg"></i></button>
+                    </div>
+                      </div>
+
+                      <div id="p13" class="card border border-2 border-primary p-2" style="display:none; ">
+                        <div class="row g-3">
+                          <div class="col-md-12">
+                            <img src="./images/schoolfact.png" class="img-fluid rounded-start" >
+                          </div>
+                          <div class="col-md-7">
+                            <div id="factschool" class="card-body border border-2 border-primary rounded-3" style="display:none; background: linear-gradient(to bottom right, #ccffff 0%, #ffffff 99%);">
+                              <h5   class="card-title fst-italic" >A faculty member works only in one school,
+                              but multiple teachers do work in a given school.</h5>
+                              
+                            </div>
+                          </div>
+                      </div>
+                      <div class="d-grid gap-2  d-md-flex justify-content-md-end p-2" >
+                        <!--button id="prebtn12" type="button" class="btn btn-warning" onclick="goback12()" style="display:block;" disabled>
+                 <i class="fas fa-chevron-left fa-lg"></i></button-->
+                      <button id="nextbtn12" type="button" class="btn btn-primary float-right " onclick="gonext5b()" style="display:block;" disabled><i class="fas fa-chevron-right fa-lg"></i></button>
+                    </div>
+                      </div>
+
+                      <div id="p14" class="card border border-2 border-primary p-2" style="display:none; ">
+                        <div class="row g-3">
+                          <div class="col-md-12">
+                            <img src="./images/coursefact.png" class="img-fluid rounded-start" >
+                          </div>
+                          <div class="col-md-7">
+                            <div id="coursfact" class="card-body border border-2 border-primary rounded-3" style="display:none; background: linear-gradient(to bottom right, #ccffff 0%, #ffffff 99%);">
+                              <h5   class="card-title fst-italic" >A faculty member can teach multiple courses. However, a given course is normally
+                                taught by a single teacher.</h5>
+                              
+                            </div>
+                          </div>
+                      </div>
+                      <div class="d-grid gap-2  d-md-flex justify-content-md-end p-2" >
+                        <!--button id="prebtn13" type="button" class="btn btn-warning" onclick="goback13()" style="display:block;" disabled>
+                 <i class="fas fa-chevron-left fa-lg"></i></button-->
+                      <button id="nextbtn13" type="button" class="btn btn-primary float-right " onclick="gonext5c()" style="display:block;" disabled><i class="fas fa-chevron-right fa-lg"></i></button>
+                    </div>
+                      </div>
+
+                      <div id="p15" class="card border border-2 border-primary p-2" style="display:none; ">
+                        <div class="row g-3">
+                          <div class="col-md-12">
+                            <img src="./images/stdc.png" class="img-fluid rounded-start" >
+                          </div>
+                          <div class="col-md-7">
+                            <div id="cousrstd" class="card-body border border-2 border-primary rounded-3" style="display:none; background: linear-gradient(to bottom right, #ccffff 0%, #ffffff 99%);">
+                              <h5   class="card-title fst-italic" >A student can take multiple courses. 
+                                A single course can be taken by multiple students.</h5>
+                              
+                            </div>
+                          </div>
+                      </div>
+                      <div class="d-grid gap-2  d-md-flex justify-content-md-end p-2" >
+                        <!--button id="prebtn14" type="button" class="btn btn-warning" onclick="goback14()" style="display:block;" disabled>
+                 <i class="fas fa-chevron-left fa-lg"></i></button-->
+                      
+                    </div>
+                      </div>
+
+
+
+
+
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-center border border-1 border-info p-2" style="background: linear-gradient(to bottom right, #ccffff 0%, #ffffff 99%);">
+                    
+                      <button type="button" id="replaybtn" class="btn btn-warning fs-5" onclick="replaybtn()" style="display:none;"> Replay 
+                        <i class="fas fa-redo"></i></button>
+                  
+                    <button id="playbtn" type="button" class="btn btn-info fs-5" onclick="playsimulation()"> Click to Play <i class="fas fa-play fa-sm "></i></button>
+                    <!--i class="fa-solid fa-play"></i-->
+                    
+                   
+                  </div>
+                </div>
+              </div>
+                </div>
+            </div>
+            <hr>
+           
+            <a class="btn btn-success fs-4" target="_blank" href="./er-diagram.html" role="button">Click Here to Go to Exercise Page</a>
+            <hr>    
+        </div>
+            </div>
+
+
+            <!-- <div class="container p-1 ">
+              <hr>
+            <footer class="text-white text-center" >
+              
+                <p class="text-primary fs-5 text-center" >  Copyright  © 2023  IIT Kharagpur, <a class="text-primary fs-5 text-center " href="http://vlabs.iitkgp.ac.in/">Virtual Lab</a></p>
+             
+            </footer>
+            <hr>
+            </div> -->
+
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/simulation.js"></script>
 </body>
 </html>

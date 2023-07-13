@@ -2,35 +2,34 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": " An entity set could be related to itself",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "True",
+        "b": "False "
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "A prime attributes is indicated by",
+      "answers": {
+        "a": "Underline inside an ellipse ",
+        "b": "Double ellipse ",
+        "c": "Dotted ellipse ",
+        "d": "Dotted rectangle "
+       
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Students study in schools -- this is a",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "1:1 mapping ",
+        "b": "1:N mapping  ",
+        "c": "M:1 mapping ",
+        "d": "M:N mapping "
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
