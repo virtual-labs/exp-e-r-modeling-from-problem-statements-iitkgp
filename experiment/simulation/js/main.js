@@ -425,6 +425,7 @@ function addbtnt2() {
       //arrattri = arrattri1.push(inpt2);
       //console.log(arrattri);
       document.getElementById("inp2").value = "";
+      document.getElementById("chkinp2").checked=false;
     }
 
 
