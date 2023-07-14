@@ -325,6 +325,7 @@ function addbtnt22() {
     // var arrattri2=arrattri21.push(inpt22);
     //console.log(arrattri2);
     document.getElementById("inp22").value = "";
+    document.getElementById("chkinp22").checked=false;
 
   }
 
