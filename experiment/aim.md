@@ -1,6 +1,3 @@
-## Objectives
+## Aim of the Experiment
 
-**After completing this experiment you will be able to:**
-
-- Identify entity sets, their attributes, and various relationships
-- Represent the data model through ER diagram
+In this experiment we will learn how to find the entities, its attributes and how the relationships between the entities can be established for a system.
