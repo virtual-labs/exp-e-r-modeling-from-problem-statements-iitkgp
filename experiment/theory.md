@@ -1,8 +1,9 @@
-## Introduction 
+## Objectives
 
-Developing databases is a very important task to develop a system. Before going to form exact database tables and establishing relationships between them, we conceptually or logically can model our database using ER diagrams.
+**After completing this experiment you will be able to:**
 
-In this experiment we will learn how to find the entities, its attributes and how the relationships between the entities can be established for a system.
+- Identify entity sets, their attributes, and various relationships
+- Represent the data model through ER diagram
 
 ## Theory
 
