@@ -585,7 +585,7 @@ if((length21 == 3)&& (length22 == 3)&&(length23 == 6)&&(length24 == 5) ){
 }
 
 else{
-  alert("Enter all attributes for each entities");
+  alert("Enter all attributes for each entities. \n\n Hint: There are four entities and add all the attributes for each entity as given in the problem statement.");
  //
   document.getElementById('dispuml2').style.display = "none";
 }

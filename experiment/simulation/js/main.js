@@ -634,7 +634,7 @@ function drawbtnex21() {
   }
   
   else{
-    alert("Enter all attributes for each entities");
+    alert("Enter all attributes for each entities. \n\n Hint: There are two entities and add all the attributes for each entity as given in the problem statement.");
    //
    document.getElementById('dispuml1').style.display = "none";
   }
