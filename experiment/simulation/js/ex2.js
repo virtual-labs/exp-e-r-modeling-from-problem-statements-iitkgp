@@ -578,7 +578,7 @@ function removerowuc(btndel) {
 function drawbtnex22() {
 
   
-if((length21 == 3)&& (length22 == 3)&&(length23 == 6)&&(length24 == 5) ){
+if((length21 >= 3)&& (length22 >= 3)&&(length23 >= 6)&&(length24 >= 5) ){
   arrconstrt2 = consrting.split(/[ ,]+/);
   // console.log(arrconstrt2);
   document.getElementById('dispuml2').style.display = "block";

@@ -628,7 +628,7 @@ function removerowa(btndel) {
 
 function drawbtnex21() {
 
-  if((length1 == 6)&& (length2 == 2) ){
+  if((length1 >= 6)&& (length2 >= 2) ){
 
     document.getElementById('dispuml1').style.display = "block";
   }
