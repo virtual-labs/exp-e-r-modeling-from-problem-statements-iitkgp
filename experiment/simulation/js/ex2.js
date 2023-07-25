@@ -818,7 +818,7 @@ else{
 
     },
     label: {
-      text: arrrel2[5], //drives
+      text: "drives", //drives //return arrrel2[5]
       fill: 'black',
       fontSize: 11
     }
@@ -908,7 +908,7 @@ else{
       strokeWidth: 2
     },
     label: {
-      text: arrattri22[0],
+      text: arrattri23[0],
       fill: 'black',
       fontSize: 16
     }
@@ -929,7 +929,7 @@ else{
       strokeWidth: 2
     },
     label: {
-      text: arrattri22[1],
+      text: arrattri23[1],
       fill: 'black',
       fontSize: 16
     }
@@ -948,7 +948,7 @@ else{
       strokeWidth: 2
     },
     label: {
-      text: arrattri22[2],
+      text: arrattri23[2],
       fill: 'black',
       fontSize: 16
     }
@@ -956,7 +956,7 @@ else{
   attri23.addTo(graph);
 
   var attri24 = new joint.shapes.standard.Ellipse();
-  attri24.position(66, 152);
+  attri24.position(663, 152);
 
   attri24.resize(130, 40);
   attri24.attr({
@@ -967,7 +967,7 @@ else{
       strokeWidth: 2
     },
     label: {
-      text: arrattri22[3],
+      text: arrattri23[3],
       fill: 'black',
       fontSize: 16
     }
@@ -986,7 +986,7 @@ else{
       strokeWidth: 2
     },
     label: {
-      text: arrattri22[4],
+      text: arrattri23[4],
       fill: 'black',
       fontSize: 16
     }
@@ -1005,7 +1005,7 @@ else{
       strokeWidth: 2
     },
     label: {
-      text: arrattri22[5],
+      text: arrattri23[5],
       fill: 'black',
       fontSize: 16
     }
@@ -1026,7 +1026,7 @@ else{
       strokeWidth: 2
     },
     label: {
-      text: arrattri23[0],
+      text: arrattri22[0],
       fill: 'black',
       fontSize: 16
     }
@@ -1045,7 +1045,7 @@ else{
       strokeWidth: 2
     },
     label: {
-      text: arrattri23[1],
+      text: arrattri22[1],
       fill: 'black',
       fontSize: 16
     }
@@ -1064,7 +1064,7 @@ else{
       strokeWidth: 2
     },
     label: {
-      text: arrattri23[2],
+      text: arrattri22[2],
       fill: 'black',
       fontSize: 16
     }
