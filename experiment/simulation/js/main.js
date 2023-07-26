@@ -109,7 +109,7 @@ var arrconstrt = [];
 function addbtnt1() {
 
   inpt1 = document.getElementById("inp1").value;
-  
+
   checkedvalue = document.getElementById("chkinp1");
 
 
@@ -349,7 +349,7 @@ var arrattri2 = [];
 var arrattri = [];
 var arrattrii = [];
 var entval;
-var length1,length2;
+var length1, length2;
 
 function addbtnt2() {
 
@@ -425,12 +425,12 @@ function addbtnt2() {
       //arrattri = arrattri1.push(inpt2);
       //console.log(arrattri);
       document.getElementById("inp2").value = "";
-      document.getElementById("chkinp2").checked=false;
+      document.getElementById("chkinp2").checked = false;
     }
 
 
   }
- 
+
 
   var myTable = document.getElementById('tbodyt4');
   var cellIndex = 1; // Index of the desired cell (1-based)
@@ -454,7 +454,7 @@ function addbtnt2() {
 
       if (i == 0) {
         arrattri.push(rowValues);
-        
+
         if (listItems.length != 6) {
           //document.getElementById('drawbtn').disabled = true;
         }
@@ -462,17 +462,17 @@ function addbtnt2() {
           //document.getElementById('drawbtn').disabled = false;
         }
 
-        
+
 
       } if (i == 1) {
 
         arrattrii.push(rowValues);
 
         if (listItems.length != 2) {
-        //  document.getElementById('drawbtn').disabled = true;
+          //  document.getElementById('drawbtn').disabled = true;
         }
         else {
-         // document.getElementById('drawbtn').disabled = false;
+          // document.getElementById('drawbtn').disabled = false;
         }
       }
 
@@ -492,7 +492,7 @@ function addbtnt2() {
   length2 = arrattri2.length;
   console.log(length2);
 
- 
+
 }
 
 
@@ -572,7 +572,7 @@ function addbtnt3() {
   }
 
 
-  
+
 
 }
 
@@ -601,22 +601,23 @@ function removerowa(btndel) {
     //$("#selectactuc1").find('option[value="' + listItemValue + '"]').remove();
     //$("#selectactuc2").find('option[value="' + listItemValue + '"]').remove();
 
-  /* Remove item from array */
-  var index = arrattri1.indexOf(listItemValue);
-  var index2 = arrattri2.indexOf(listItemValue);
-         if (index !== -1) {
-          arrattri1.splice(index, 1);
-       
-         }
-         if (index2 !== -1) {
-         
-          arrattri2.splice(index2, 1);
-         }
-         console.log(arrattri1);
-         console.log(arrattri2);
+    /* Remove item from array */
+    var index = arrattri1.indexOf(listItemValue);
+
+    if (index !== -1) {
+      arrattri1.splice(index, 1);
+
+    }
+    var index2 = arrattri2.indexOf(listItemValue);
+    if (index2 !== -1) {
+
+      arrattri2.splice(index2, 1);
+    }
+    console.log(arrattri1);
+    console.log(arrattri2);
   }
 
-  
+
   else {
     return false;
   }
@@ -628,17 +629,17 @@ function removerowa(btndel) {
 
 function drawbtnex21() {
 
-  if((length1 >= 6)&& (length2 >= 2) ){
+  if ((length1 >= 6) && (length2 >= 2)) {
 
     document.getElementById('dispuml1').style.display = "block";
   }
-  
-  else{
+
+  else {
     alert("Enter all attributes for each entities. \n\n Hint: There are two entities and add all the attributes for each entity as given in the problem statement.");
-   //
-   document.getElementById('dispuml1').style.display = "none";
+    //
+    document.getElementById('dispuml1').style.display = "none";
   }
-  
+
 
   var namespace = joint.shapes;
 

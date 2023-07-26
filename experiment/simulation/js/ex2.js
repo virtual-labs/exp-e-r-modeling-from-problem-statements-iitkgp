@@ -76,7 +76,7 @@ function addbtnt21() {
     const value1 = cells[0].textContent;
     if ((cells[0].innerHTML == inpt21)) {
       areInserted = true;
-      
+
       break;
     }
 
@@ -89,7 +89,7 @@ function addbtnt21() {
     arrentity2.push(inpt21);
     if ((inpt21 !== "") && (checkedvalue2.checked)) {
 
-      
+
 
       /**** Weak entity ****/
 
@@ -161,7 +161,7 @@ function addbtnt21() {
 
 
     if ((inpt21 !== "") && (checkedvalue2.checked == false)) {
-     
+
 
       /**** Not a Weak entity ****/
       newtdwnt2 = document.createElement("td");
@@ -263,7 +263,7 @@ var arrattrii1 = [];
 var arrattrii2 = [];
 var arrattrii3 = [];
 var arrattrii4 = [];
-var length21,length22,length23,length24;
+var length21, length22, length23, length24;
 function addbtnt22() {
 
 
@@ -325,7 +325,7 @@ function addbtnt22() {
     // var arrattri2=arrattri21.push(inpt22);
     //console.log(arrattri2);
     document.getElementById("inp22").value = "";
-    document.getElementById("chkinp22").checked=false;
+    document.getElementById("chkinp22").checked = false;
 
   }
 
@@ -410,7 +410,7 @@ function addbtnt22() {
   var mergedArray2b = [].concat.apply([], arrattrii2);
   arrattri22 = [...new Set(mergedArray2b)]; //removes duplicates
   console.log(arrattri22);
-   length22 = arrattri22.length;
+  length22 = arrattri22.length;
   console.log(length22);
 
   var mergedArray2c = [].concat.apply([], arrattrii3);
@@ -470,11 +470,11 @@ function addbtnt23() {
   if (dobj21 == dobj22) {
     alert(dobj21 + "  is not related to  " + dobj22);
   }
-  else if ((objsel21.options.length === 0 ) || (objsel22.options.length === 0 )) {
+  else if ((objsel21.options.length === 0) || (objsel22.options.length === 0)) {
     alert("Select entity from the dropdown");
   }
 
- else if (relobj22 == "Select Relation") {
+  else if (relobj22 == "Select Relation") {
     alert("Select relation from the dropdown");
   }
 
@@ -516,7 +516,7 @@ function addbtnt23() {
 
   //document.getElementById("ftbl23").reset();
 
-  
+
 
 }
 
@@ -542,21 +542,24 @@ function removerowuc(btndel) {
     $(btndel).closest("li").remove();
 
     var index = arrattri21.indexOf(listItemValue);
-    var index2 = arrattri22.indexOf(listItemValue);
-    var index3 = arrattri23.indexOf(listItemValue);
-    var index4 = arrattri24.indexOf(listItemValue);
+
     if (index !== -1) {
       arrattri21.splice(index, 1);
 
     }
+    var index2 = arrattri22.indexOf(listItemValue);
+
     if (index2 !== -1) {
 
       arrattri22.splice(index2, 1);
     }
+    var index3 = arrattri23.indexOf(listItemValue);
+
     if (index3 !== -1) {
 
       arrattri23.splice(index3, 1);
     }
+    var index4 = arrattri24.indexOf(listItemValue);
     if (index4 !== -1) {
 
       arrattri24.splice(index4, 1);
@@ -577,18 +580,18 @@ function removerowuc(btndel) {
 
 function drawbtnex22() {
 
-  
-if((length21 >= 3)&& (length22 >= 3)&&(length23 >= 6)&&(length24 >= 5) ){
-  arrconstrt2 = consrting.split(/[ ,]+/);
-  // console.log(arrconstrt2);
-  document.getElementById('dispuml2').style.display = "block";
-}
 
-else{
-  alert("Enter all attributes for each entities. \n\n Hint: There are four entities and add all the attributes for each entity as given in the problem statement.");
- //
-  document.getElementById('dispuml2').style.display = "none";
-}
+  if ((length21 >= 3) && (length22 >= 3) && (length23 >= 6) && (length24 >= 5)) {
+    arrconstrt2 = consrting.split(/[ ,]+/);
+    // console.log(arrconstrt2);
+    document.getElementById('dispuml2').style.display = "block";
+  }
+
+  else {
+    alert("Enter all attributes for each entities. \n\n Hint: There are four entities and add all the attributes for each entity as given in the problem statement.");
+    //
+    document.getElementById('dispuml2').style.display = "none";
+  }
   var namespace = joint.shapes;
 
   var graph = new joint.dia.Graph({}, { cellNamespace: namespace });
@@ -829,7 +832,7 @@ else{
   /*************************** Attributes of first entity agency *************************************/
 
 
-  var attri11 = new joint.shapes.standard.Ellipse(); 
+  var attri11 = new joint.shapes.standard.Ellipse();
   attri11.position(100, 31);
 
   attri11.resize(100, 40);
@@ -1306,7 +1309,7 @@ else{
   linkr1.appendLabel({
     attrs: {
       text: {
-        text: arrconstrt2[0], 
+        text: arrconstrt2[0],
         fontSize: 16
       }
 
@@ -1505,7 +1508,7 @@ else{
 
 
 
-  
+
 
 
 }
