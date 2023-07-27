@@ -75,7 +75,7 @@ function addbtnt21() {
   for (let i = 0; i < tableRows.length; i++) {
     const cells = tableRows[i].getElementsByTagName("td");
     const value1 = cells[0].textContent;
-    if ((cells[0].innerHTML == inpt21)) {
+    if ((cells[0].innerText == inpt21)) {
       areInserted = true;
 
       break;
