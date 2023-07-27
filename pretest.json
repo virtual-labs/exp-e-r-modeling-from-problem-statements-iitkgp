@@ -1,0 +1,29 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "In ER model an entity is usually related to another entity. The relationship is indicated by a",
+      "answers": {
+        "a": "Rectangle ",
+        "b": "Ellipse ",
+        "c": "Triangle ",
+        "d": "Diamond "
+      },
+      
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Entity Relationship model is used to represent the database at a",
+      "answers": {
+        "a": "Logical level ",
+        "b": "Physical level"
+        
+      },
+      
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }
+    
+  ]
+}

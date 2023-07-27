@@ -1,0 +1,152 @@
+
+/home/runner/work/exp-e-r-modeling-from-problem-statements-iitkgp/exp-e-r-modeling-from-problem-statements-iitkgp/experiment/simulation/js/ex2.js
+    13:16  warning  'newtdIDt2' is defined but never used         no-unused-vars
+    14:45  warning  'newtdta2' is defined but never used          no-unused-vars
+    17:5   warning  'myarray' is assigned a value but never used  no-unused-vars
+    19:5   warning  'arrrel2' is assigned a value but never used  no-unused-vars
+    21:10  warning  'addbtnt21' is defined but never used         no-unused-vars
+    77:11  warning  'value1' is assigned a value but never used   no-unused-vars
+   268:10  warning  'addbtnt22' is defined but never used         no-unused-vars
+   300:9   warning  'primary_key' is already defined              no-redeclare
+   301:9   warning  'para' is already defined                     no-redeclare
+   437:10  warning  'addbtnt23' is defined but never used         no-unused-vars
+   524:10  warning  'removerowtrb' is defined but never used      no-unused-vars
+   526:28  warning  '$' is not defined                            no-undef
+   528:5   warning  '$' is not defined                            no-undef
+   545:10  warning  'removerow' is defined but never used         no-unused-vars
+   547:5   warning  '$' is not defined                            no-undef
+   558:10  warning  'removerowuc' is defined but never used       no-unused-vars
+   561:25  warning  '$' is not defined                            no-undef
+   562:5   warning  '$' is not defined                            no-undef
+   601:10  warning  'drawbtnex22' is defined but never used       no-unused-vars
+   619:19  warning  'joint' is not defined                        no-undef
+   621:19  warning  'joint' is not defined                        no-undef
+   623:3   warning  'paper' is not defined                        no-undef
+   623:15  warning  'joint' is not defined                        no-undef
+   640:21  warning  'joint' is not defined                        no-undef
+   662:21  warning  'joint' is not defined                        no-undef
+   682:21  warning  'joint' is not defined                        no-undef
+   699:21  warning  'joint' is not defined                        no-undef
+   718:25  warning  'joint' is not defined                        no-undef
+   743:25  warning  'joint' is not defined                        no-undef
+   767:25  warning  'joint' is not defined                        no-undef
+   791:25  warning  'joint' is not defined                        no-undef
+   813:25  warning  'joint' is not defined                        no-undef
+   835:25  warning  'joint' is not defined                        no-undef
+   859:21  warning  'joint' is not defined                        no-undef
+   878:21  warning  'joint' is not defined                        no-undef
+   897:21  warning  'joint' is not defined                        no-undef
+   926:21  warning  'joint' is not defined                        no-undef
+   947:21  warning  'joint' is not defined                        no-undef
+   966:21  warning  'joint' is not defined                        no-undef
+   985:21  warning  'joint' is not defined                        no-undef
+  1004:21  warning  'joint' is not defined                        no-undef
+  1023:21  warning  'joint' is not defined                        no-undef
+  1044:21  warning  'joint' is not defined                        no-undef
+  1063:21  warning  'joint' is not defined                        no-undef
+  1082:21  warning  'joint' is not defined                        no-undef
+  1104:21  warning  'joint' is not defined                        no-undef
+  1123:21  warning  'joint' is not defined                        no-undef
+  1142:21  warning  'joint' is not defined                        no-undef
+  1161:21  warning  'joint' is not defined                        no-undef
+  1180:21  warning  'joint' is not defined                        no-undef
+  1200:3   warning  'joint' is not defined                        no-undef
+  1214:19  warning  'joint' is not defined                        no-undef
+  1222:19  warning  'joint' is not defined                        no-undef
+  1228:19  warning  'joint' is not defined                        no-undef
+  1237:19  warning  'joint' is not defined                        no-undef
+  1243:19  warning  'joint' is not defined                        no-undef
+  1249:19  warning  'joint' is not defined                        no-undef
+  1256:19  warning  'joint' is not defined                        no-undef
+  1262:19  warning  'joint' is not defined                        no-undef
+  1268:20  warning  'joint' is not defined                        no-undef
+  1274:20  warning  'joint' is not defined                        no-undef
+  1280:20  warning  'joint' is not defined                        no-undef
+  1286:20  warning  'joint' is not defined                        no-undef
+  1293:20  warning  'joint' is not defined                        no-undef
+  1300:20  warning  'joint' is not defined                        no-undef
+  1307:20  warning  'joint' is not defined                        no-undef
+  1313:20  warning  'joint' is not defined                        no-undef
+  1319:20  warning  'joint' is not defined                        no-undef
+  1329:20  warning  'joint' is not defined                        no-undef
+  1347:20  warning  'joint' is not defined                        no-undef
+  1365:20  warning  'joint' is not defined                        no-undef
+  1381:20  warning  'joint' is not defined                        no-undef
+  1399:20  warning  'joint' is not defined                        no-undef
+  1416:20  warning  'joint' is not defined                        no-undef
+  1433:20  warning  'joint' is not defined                        no-undef
+  1450:20  warning  'joint' is not defined                        no-undef
+  1466:20  warning  'joint' is not defined                        no-undef
+  1483:21  warning  'joint' is not defined                        no-undef
+  1500:21  warning  'joint' is not defined                        no-undef
+  1517:21  warning  'joint' is not defined                        no-undef
+
+/home/runner/work/exp-e-r-modeling-from-problem-statements-iitkgp/exp-e-r-modeling-from-problem-statements-iitkgp/experiment/simulation/js/main.js
+    9:10  warning  'subex' is defined but never used             no-unused-vars
+   74:10  warning  'viewsolutionb' is defined but never used     no-unused-vars
+   81:10  warning  'solview' is defined but never used           no-unused-vars
+  101:14  warning  'newtdID' is defined but never used           no-unused-vars
+  102:37  warning  'newtda2' is defined but never used           no-unused-vars
+  105:5   warning  'myarray' is assigned a value but never used  no-unused-vars
+  109:10  warning  'addbtnt1' is defined but never used          no-unused-vars
+  164:11  warning  'value1' is assigned a value but never used   no-unused-vars
+  355:10  warning  'addbtnt2' is defined but never used          no-unused-vars
+  387:9   warning  'primary_key' is already defined              no-redeclare
+  388:9   warning  'para' is already defined                     no-redeclare
+  507:10  warning  'addbtnt3' is defined but never used          no-unused-vars
+  582:10  warning  'removerowtr' is defined but never used       no-unused-vars
+  584:27  warning  '$' is not defined                            no-undef
+  586:5   warning  '$' is not defined                            no-undef
+  604:10  warning  'removerowa' is defined but never used        no-unused-vars
+  608:25  warning  '$' is not defined                            no-undef
+  610:5   warning  '$' is not defined                            no-undef
+  640:10  warning  'drawbtnex21' is defined but never used       no-unused-vars
+  658:19  warning  'joint' is not defined                        no-undef
+  660:19  warning  'joint' is not defined                        no-undef
+  662:3   warning  'paper' is not defined                        no-undef
+  662:15  warning  'joint' is not defined                        no-undef
+  679:21  warning  'joint' is not defined                        no-undef
+  697:21  warning  'joint' is not defined                        no-undef
+  716:24  warning  'joint' is not defined                        no-undef
+  740:21  warning  'joint' is not defined                        no-undef
+  759:21  warning  'joint' is not defined                        no-undef
+  778:21  warning  'joint' is not defined                        no-undef
+  797:21  warning  'joint' is not defined                        no-undef
+  816:21  warning  'joint' is not defined                        no-undef
+  835:21  warning  'joint' is not defined                        no-undef
+  862:21  warning  'joint' is not defined                        no-undef
+  883:21  warning  'joint' is not defined                        no-undef
+  904:3   warning  'joint' is not defined                        no-undef
+  918:19  warning  'joint' is not defined                        no-undef
+  926:19  warning  'joint' is not defined                        no-undef
+  932:19  warning  'joint' is not defined                        no-undef
+  938:19  warning  'joint' is not defined                        no-undef
+  944:19  warning  'joint' is not defined                        no-undef
+  950:19  warning  'joint' is not defined                        no-undef
+  957:19  warning  'joint' is not defined                        no-undef
+  963:19  warning  'joint' is not defined                        no-undef
+  975:7   warning  'link7' is already defined                    no-redeclare
+  975:19  warning  'joint' is not defined                        no-undef
+  993:7   warning  'link8' is already defined                    no-redeclare
+  993:19  warning  'joint' is not defined                        no-undef
+
+/home/runner/work/exp-e-r-modeling-from-problem-statements-iitkgp/exp-e-r-modeling-from-problem-statements-iitkgp/experiment/simulation/js/simulation.js
+    47:10  warning  'gonext' is defined but never used     no-unused-vars
+    74:10  warning  'gonext1' is defined but never used    no-unused-vars
+    99:10  warning  'gonext2' is defined but never used    no-unused-vars
+   125:10  warning  'gonext3' is defined but never used    no-unused-vars
+   196:10  warning  'gonext2a' is defined but never used   no-unused-vars
+   229:10  warning  'gonext2b' is defined but never used   no-unused-vars
+   263:10  warning  'gonext2c' is defined but never used   no-unused-vars
+   449:10  warning  'gonext5a' is defined but never used   no-unused-vars
+   489:10  warning  'gonext5b' is defined but never used   no-unused-vars
+   528:10  warning  'gonext5c' is defined but never used   no-unused-vars
+   949:10  warning  'gostep1' is defined but never used    no-unused-vars
+   969:10  warning  'gostep2' is defined but never used    no-unused-vars
+   989:10  warning  'gostep3' is defined but never used    no-unused-vars
+  1009:10  warning  'gostep4' is defined but never used    no-unused-vars
+  1027:10  warning  'gostep5' is defined but never used    no-unused-vars
+  1046:10  warning  'replaybtn' is defined but never used  no-unused-vars
+
+✖ 143 problems (0 errors, 143 warnings)
+
