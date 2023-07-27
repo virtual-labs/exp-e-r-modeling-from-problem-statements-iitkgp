@@ -29,7 +29,7 @@ function addbtnt21() {
 
   var newIconbtn = document.createElement("img");
   newIconbtn.setAttribute("src", "./images/remove.png");
-  newIconbtn.setAttribute("onclick", "removerow(this)");
+  newIconbtn.setAttribute("onclick", "removerowtrb(this)");
   newIconbtn.setAttribute("style", "cursor:pointer;");
 
 
@@ -39,14 +39,15 @@ function addbtnt21() {
   newtrt2.setAttribute("id", newtrIDt2);
   newtdt2 = document.createElement("td");
   newtdt2.setAttribute("class", "ent");
+  newtdt2.setAttribute("data-value", inpt21);
   //newdiv = document.createElement("div");
   //newdiv.setAttribute("class", "form-check");
   newtrt2.appendChild(newtdt2);
-  //newtd.appendChild(newdiv);
+  //newtdt2.appendChild(newdiv);
 
   let liTextNodeact = document.createTextNode(inpt21);
   newtdt2.appendChild(liTextNodeact);
-  //newtd.appendChild(newIconbtn);
+  newtdt2.appendChild(newIconbtn);
 
   /**** Attribute *****/
   newulIDt2 = "attri_" + inpt21;
@@ -520,7 +521,26 @@ function addbtnt23() {
 
 }
 
+function removerowtrb(btndel) {
+  if (typeof (btndel) == "object") {
+    var listItemValuetrb = $(btndel).closest("td").data("value");
+    console.log(listItemValuetrb);
+    $(btndel).closest("tr").remove();
+    var index = arrentity2.indexOf(listItemValuetrb);
+  
+    if (index !== -1) {
+      arrentity2.splice(index, 1);
+  
+    }
+    console.log(arrentity2);
 
+  }
+
+
+  else {
+    return false;
+  }
+}
 
 function removerow(btndel) {
   if (typeof (btndel) == "object") {
@@ -581,14 +601,18 @@ function removerowuc(btndel) {
 function drawbtnex22() {
 
 
-  if ((length21 >= 3) && (length22 >= 3) && (length23 >= 6) && (length24 >= 5)) {
+  if ((length21 >= 3) && (length22 >= 3) && (length23 >= 6) && (length24 >= 5) && (arrentity2.length==4)) {
     arrconstrt2 = consrting.split(/[ ,]+/);
     // console.log(arrconstrt2);
     document.getElementById('dispuml2').style.display = "block";
   }
-
-  else {
-    alert("Enter all attributes for each entities. \n\n Hint: There are four entities and add all the attributes for each entity as given in the problem statement.");
+  else if(arrentity2.length !=4){
+    alert("There are four entities in the given problem statement.");
+    //
+    document.getElementById('dispuml1').style.display = "none";
+  }
+  else if((length21 != 3) || (length22 != 3) || (length23 != 6) || (length24 != 5)){
+    alert("Enter all attributes for each entities. \n\n Hint: Add all the attributes for each entity as given in the problem statement.");
     //
     document.getElementById('dispuml2').style.display = "none";
   }

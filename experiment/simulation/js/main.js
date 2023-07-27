@@ -117,7 +117,7 @@ function addbtnt1() {
 
   var newIconbtn = document.createElement("img");
   newIconbtn.setAttribute("src", "./images/remove.png");
-  newIconbtn.setAttribute("onclick", "removerow(this)");
+  newIconbtn.setAttribute("onclick", "removerowtr(this)");
   newIconbtn.setAttribute("style", "cursor:pointer;");
 
 
@@ -127,6 +127,7 @@ function addbtnt1() {
   newtr.setAttribute("id", newtrID);
   newtd = document.createElement("td");
   newtd.setAttribute("class", "ent");
+  newtd.setAttribute("data-value", inpt1);
   //newdiv = document.createElement("div");
   //newdiv.setAttribute("class", "form-check");
   newtr.appendChild(newtd);
@@ -134,7 +135,7 @@ function addbtnt1() {
 
   let liTextNodeact = document.createTextNode(inpt1);
   newtd.appendChild(liTextNodeact);
-  //newtd.appendChild(newIconbtn);
+  newtd.appendChild(newIconbtn);
 
   /**** Attribute *****/
   newulID = "attri_" + inpt1;
@@ -578,9 +579,18 @@ function addbtnt3() {
 
 
 
-function removerow(btndel) {
+function removerowtr(btndel) {
   if (typeof (btndel) == "object") {
+    var listItemValuetr = $(btndel).closest("td").data("value");
+    console.log(listItemValuetr);
     $(btndel).closest("tr").remove();
+    var index = arrentity.indexOf(listItemValuetr);
+  
+    if (index !== -1) {
+      arrentity.splice(index, 1);
+  
+    }
+    console.log(arrentity);
 
   }
 
@@ -629,13 +639,17 @@ function removerowa(btndel) {
 
 function drawbtnex21() {
 
-  if ((length1 >= 6) && (length2 >= 2)) {
+  if ((length1 >= 6) && (length2 >= 2) && (arrentity.length ==2)) {
 
     document.getElementById('dispuml1').style.display = "block";
   }
-
-  else {
-    alert("Enter all attributes for each entities. \n\n Hint: There are two entities and add all the attributes for each entity as given in the problem statement.");
+else if(arrentity.length !=2){
+  alert("There are two entities in the given problem statement.");
+  //
+  document.getElementById('dispuml1').style.display = "none";
+}
+  else if((length1 != 6) || (length2 != 2)) {
+    alert("Enter all attributes for each entities. \n\n Hint: Add all the attributes for each entity as given in the problem statement.");
     //
     document.getElementById('dispuml1').style.display = "none";
   }
