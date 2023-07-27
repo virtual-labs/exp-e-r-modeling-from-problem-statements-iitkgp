@@ -162,7 +162,7 @@ function addbtnt1() {
   for (let i = 0; i < tableRows.length; i++) {
     const cells = tableRows[i].getElementsByTagName("td");
     const value1 = cells[0].textContent;
-    if ((cells[0].innerHTML == inpt1)) {
+    if ((cells[0].innerText == inpt1)) {
       areInserted = true;
       break;
     }
@@ -403,12 +403,12 @@ function addbtnt2() {
   newLi.appendChild(para);
   newLi.appendChild(newIconbtn);
   // alert(cellval2);
-
+  let isInserted = false;
   if (inpt2 == "") {
     alert("Please Enter Attribute Before Clicking Add Button");
   }
   else {
-    let isInserted = false;
+    
     const myLista = document.getElementById("attri_" + entval);
     const listItemsa = myLista.getElementsByTagName("li");
     for (let i = 0; i < listItemsa.length; i++) {
