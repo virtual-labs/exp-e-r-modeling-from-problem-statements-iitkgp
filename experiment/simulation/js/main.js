@@ -408,7 +408,7 @@ function addbtnt2() {
     alert("Please Enter Attribute Before Clicking Add Button");
   }
   else {
-    
+
     const myLista = document.getElementById("attri_" + entval);
     const listItemsa = myLista.getElementsByTagName("li");
     for (let i = 0; i < listItemsa.length; i++) {
@@ -585,10 +585,10 @@ function removerowtr(btndel) {
     console.log(listItemValuetr);
     $(btndel).closest("tr").remove();
     var index = arrentity.indexOf(listItemValuetr);
-  
+
     if (index !== -1) {
       arrentity.splice(index, 1);
-  
+
     }
     console.log(arrentity);
 
@@ -635,11 +635,11 @@ function removerowa(btndel) {
 
 }
 
-
+var entityi1=[];
 
 function drawbtnex21() {
 
-  if ((length1 >= 6) && (length2 >= 2) && (arrentity.length ==2)) {
+  /* if ((length1 >= 6) && (length2 >= 2) && (arrentity.length ==2)) {
 
     document.getElementById('dispuml1').style.display = "block";
   }
@@ -652,8 +652,8 @@ else if(arrentity.length !=2){
     alert("Enter all attributes for each entities. \n\n Hint: Add all the attributes for each entity as given in the problem statement.");
     //
     document.getElementById('dispuml1').style.display = "none";
-  }
-
+  } */
+  document.getElementById('dispuml1').style.display = "block";
 
   var namespace = joint.shapes;
 
@@ -674,184 +674,281 @@ else if(arrentity.length !=2){
     cellViewNamespace: namespace
   });
 
+  joint.shapes.standard.Link.define('examples.CustomLink', {
+    attrs: {
+      line: {
+        stroke: 'black',
+        strokeWidth: 2,
+        targetMarker: {
+          'type': 'rect',
+          'stroke': 'none'
+        }
+      }
+    },
+
+  });
+  var posen1 = 169;
+  var posen2 = 271;
+  for (var i = 0; i < arrentity.length; i++) {
+    var entity1i = new joint.shapes.standard.Rectangle();
+
+    entity1i.position(posen1, posen2);
+    entity1i.resize(100, 40);
+    entity1i.attr({
+      body: {
+        fill: '#FFFC8C',
+        strokeWidth: 2
+      },
+      label: {
+        text: arrentity[i],
+        fill: 'black',
+        fontSize: 16
+      }
+    });
+    entity1i.addTo(graph);
+    posen1 += 330;
+
+    entityi1.push(entity1i);
+  }
+
+/******************************************* Relation **********************************************/
+
+var diamondrel = new joint.shapes.standard.Rectangle();
+
+diamondrel.position(355, 261);
+diamondrel.resize(50, 50);
+
+diamondrel.attr({
+  body: {
+    fill: '#AEFFEB',
+    strokeWidth: 2,
+
+
+  },
+  label: {
+    text: arrrel[0],
+    fill: 'black',
+    fontSize: 11
+  }
+
+});
+diamondrel.rotate(40);
+diamondrel.addTo(graph);
+
+var link7 = new joint.shapes.examples.CustomLink();
+    link7.source(entityi1[0]);
+    link7.target(diamondrel);
+    link7.addTo(graph);
+    link7.appendLabel({
+      attrs: {
+        text: {
+          text: arrconstrt[0],
+          fontSize: 16
+        }
+  
+      }
+    });
+    link7.addTo(graph);
+  
+  
+  
+  
+    var link8 = new joint.shapes.examples.CustomLink();
+  
+    link8.source(entityi1[1]);
+    link8.target(diamondrel);
+    link8.addTo(graph);
+    link8.appendLabel({
+      attrs: {
+        text: {
+          text: arrconstrt[2],
+          fontSize: 16
+        }
+  
+      }
+    });
+    link8.addTo(graph);
+   
+
+  
+
+
 
   /********************************* Entity 1 **************************************8*/
-  var entity1 = new joint.shapes.standard.Rectangle();
-
-  entity1.position(169, 271);
-  entity1.resize(100, 40);
-  entity1.attr({
-    body: {
-      fill: '#FFFC8C',
-      strokeWidth: 2
-    },
-    label: {
-      text: arrentity[0],
-      fill: 'black',
-      fontSize: 16
-    }
-  });
-  entity1.addTo(graph);
+  /*  var entity1 = new joint.shapes.standard.Rectangle();
+ 
+   entity1.position(169, 271);
+   entity1.resize(100, 40);
+   entity1.attr({
+     body: {
+       fill: '#FFFC8C',
+       strokeWidth: 2
+     },
+     label: {
+       text: arrentity[0],
+       fill: 'black',
+       fontSize: 16
+     }
+   });
+   entity1.addTo(graph); */
 
   /********************************* Entity 2 **************************************8*/
-  var entity2 = new joint.shapes.standard.Rectangle();
-  entity2.position(499, 271);
-  entity2.resize(100, 40);
-  entity2.attr({
-    body: {
-      fill: '#FFFC8C',
+  /*  var entity2 = new joint.shapes.standard.Rectangle();
+   entity2.position(499, 271);
+   entity2.resize(100, 40);
+   entity2.attr({
+     body: {
+       fill: '#FFFC8C',
+ 
+       strokeWidth: 2
+     },
+     label: {
+       text: arrentity[1],
+       fill: 'black',
+       fontSize: 16
+     }
+   });
+   entity2.addTo(graph); */
 
-      strokeWidth: 2
-    },
-    label: {
-      text: arrentity[1],
-      fill: 'black',
-      fontSize: 16
-    }
-  });
-  entity2.addTo(graph);
-
-  /******************************************* Relation **********************************************/
-
-  var diamondrel = new joint.shapes.standard.Rectangle();
-
-  diamondrel.position(355, 261);
-  diamondrel.resize(50, 50);
-
-  diamondrel.attr({
-    body: {
-      fill: '#AEFFEB',
-      strokeWidth: 2,
+  
 
 
-    },
-    label: {
-      text: arrrel[0],
-      fill: 'black',
-      fontSize: 11
-    }
 
-  });
-  diamondrel.rotate(40);
-  diamondrel.addTo(graph);
   /*************************** Attributes of first entity *************************************/
+  var posat1a = 215;
+  var posat1b = 163;
+  for (j = 0; j < arrattri1.length; j++) {
 
 
-  var attri11 = new joint.shapes.standard.Ellipse();
-  attri11.position(215, 163);
+    var attri11j = new joint.shapes.standard.Ellipse();
+    attri11j.position(posat1a, posat1b);
 
-  attri11.resize(120, 40);
-  attri11.attr({
-    body: {
-      fill: '#D4FFA6',
-      rx: 20,
-      ry: 20,
-      strokeWidth: 2
-    },
-    label: {
-      text: arrattri1[0],
-      fill: 'black',
-      fontSize: 16
-    }
-  });
-  attri11.addTo(graph);
+    attri11j.resize(120, 40);
+    attri11j.attr({
+      body: {
+        fill: '#D4FFA6',
+        rx: 20,
+        ry: 20,
+        strokeWidth: 2
+      },
+      label: {
+        text: arrattri1[j],
+        fill: 'black',
+        fontSize: 16
+      }
+    });
+    attri11j.addTo(graph);
+    posat1a -= 100;
+    posat1b += 20;
 
-  var attri12 = new joint.shapes.standard.Ellipse();
-  attri12.position(55, 183);
+   
 
-  attri12.resize(100, 40);
-  attri12.attr({
-    body: {
-      fill: '#D4FFA6',
-      rx: 20,
-      ry: 20,
-      strokeWidth: 2
-    },
-    label: {
-      text: arrattri1[1],
-      fill: 'black',
-      fontSize: 16
-    }
-  });
-  attri12.addTo(graph);
-
-  var attri13 = new joint.shapes.standard.Ellipse();
-  attri13.position(8, 271);
-
-  attri13.resize(100, 40);
-  attri13.attr({
-    body: {
-      fill: '#D4FFA6',
-      rx: 20,
-      ry: 20,
-      strokeWidth: 2
-    },
-    label: {
-      text: arrattri1[2],
-      fill: 'black',
-      fontSize: 16
-    }
-  });
-  attri13.addTo(graph);
-
-  var attri14 = new joint.shapes.standard.Ellipse();
-  attri14.position(13, 336);
-
-  attri14.resize(100, 40);
-  attri14.attr({
-    body: {
-      fill: '#D4FFA6',
-      rx: 20,
-      ry: 20,
-      strokeWidth: 2
-    },
-    label: {
-      text: arrattri1[3],
-      fill: 'black',
-      fontSize: 16
-    }
-  });
-  attri14.addTo(graph);
-
-  var attri15 = new joint.shapes.standard.Ellipse();
-  attri15.position(63, 394);
-
-  attri15.resize(100, 40);
-  attri15.attr({
-    body: {
-      fill: '#D4FFA6',
-      rx: 20,
-      ry: 20,
-      strokeWidth: 2
-    },
-    label: {
-      text: arrattri1[4],
-      fill: 'black',
-      fontSize: 16
-    }
-  });
-  attri15.addTo(graph);
-
-  var attri16 = new joint.shapes.standard.Ellipse();
-  attri16.position(179, 398);
-
-  attri16.resize(100, 40);
-  attri16.attr({
-    body: {
-      fill: '#D4FFA6',
-      rx: 20,
-      ry: 20,
-      strokeWidth: 2
-    },
-    label: {
-      text: arrattri1[5],
-      fill: 'black',
-      fontSize: 16
-    }
-  });
-  attri16.addTo(graph);
+    var link1 = new joint.shapes.examples.CustomLink();
+  
+    link1.source(entityi1[0]);
+    link1.target(attri11j);
+    link1.addTo(graph);
+  }
 
 
+  /*
+    var attri12 = new joint.shapes.standard.Ellipse();
+    attri12.position(55, 183);
+  
+    attri12.resize(100, 40);
+    attri12.attr({
+      body: {
+        fill: '#D4FFA6',
+        rx: 20,
+        ry: 20,
+        strokeWidth: 2
+      },
+      label: {
+        text: arrattri1[1],
+        fill: 'black',
+        fontSize: 16
+      }
+    });
+    attri12.addTo(graph);
+  
+    var attri13 = new joint.shapes.standard.Ellipse();
+    attri13.position(8, 271);
+  
+    attri13.resize(100, 40);
+    attri13.attr({
+      body: {
+        fill: '#D4FFA6',
+        rx: 20,
+        ry: 20,
+        strokeWidth: 2
+      },
+      label: {
+        text: arrattri1[2],
+        fill: 'black',
+        fontSize: 16
+      }
+    });
+    attri13.addTo(graph);
+  
+    var attri14 = new joint.shapes.standard.Ellipse();
+    attri14.position(13, 336);
+  
+    attri14.resize(100, 40);
+    attri14.attr({
+      body: {
+        fill: '#D4FFA6',
+
+        rx: 20,
+        ry: 20,
+        strokeWidth: 2
+      },
+      label: {
+        text: arrattri1[3],
+        fill: 'black',
+        fontSize: 16
+      }
+    });
+    attri14.addTo(graph);
+  
+    var attri15 = new joint.shapes.standard.Ellipse();
+    attri15.position(63, 394);
+  
+    attri15.resize(100, 40);
+    attri15.attr({  
+      body: {
+        fill: '#D4FFA6',
+        rx: 20,
+        ry: 20,
+        strokeWidth: 2
+      },
+      label: {
+        text: arrattri1[4],
+        fill: 'black',
+        fontSize: 16
+      }
+    });
+    attri15.addTo(graph);
+  
+    var attri16 = new joint.shapes.standard.Ellipse();
+    attri16.position(179, 398);
+  
+    attri16.resize(100, 40);
+    attri16.attr({
+      body: {
+        fill: '#D4FFA6',
+        rx: 20,
+        ry: 20,
+        strokeWidth: 2
+      },
+      label: {
+        text: arrattri1[5],
+        fill: 'black',
+        fontSize: 16
+      }
+    });
+    attri16.addTo(graph);
+  
+  */
 
 
 
@@ -859,27 +956,40 @@ else if(arrentity.length !=2){
 
 
   /******************************* Attributes of second entity ***************************************/
-  var attri21 = new joint.shapes.standard.Ellipse();
-  attri21.position(578, 173);
+  var posat2a = 578;
+  var posat2b = 173;
+  for (k = 0; k < arrattri2.length; k++) {
+    var attri21k  = new joint.shapes.standard.Ellipse();
+    attri21k.position(posat2a, posat2b);
 
-  attri21.resize(125, 40);
-  attri21.attr({
-    body: {
-      fill: '#D4FFA6',
-      rx: 20,
-      ry: 20,
-      strokeWidth: 2
-    },
-    label: {
-      text: arrattri2[0],
-      fill: 'black',
-      fontSize: 16
-    }
-  });
-  attri21.addTo(graph);
+    attri21k.resize(125, 40);
+    attri21k.attr({
+      body: {
+        fill: '#D4FFA6',
+        rx: 20,
+        ry: 20,
+        strokeWidth: 2
+      },
+      label: {
+        text: arrattri2[k],
+        fill: 'black',
+        fontSize: 16
+      }
+    });
+    attri21k.addTo(graph);
+
+    posat2a += 55;
+    posat2b += 98;
+
+    var link2 = new joint.shapes.examples.CustomLink();
+  
+    link2.source(entityi1[1]);
+    link2.target(attri21k);
+    link2.addTo(graph);
+  }
 
 
-
+  /*
   var attri22 = new joint.shapes.standard.Ellipse();
   attri22.position(574, 371);
 
@@ -898,113 +1008,113 @@ else if(arrentity.length !=2){
     }
   });
   attri22.addTo(graph);
+*/
 
-
-
-  joint.shapes.standard.Link.define('examples.CustomLink', {
-    attrs: {
-      line: {
-        stroke: 'black',
-        strokeWidth: 2,
-        targetMarker: {
-          'type': 'rect',
-          'stroke': 'none'
+  
+ /*   joint.shapes.standard.Link.define('examples.CustomLink', {
+      attrs: {
+        line: {
+          stroke: 'black',
+          strokeWidth: 2,
+          targetMarker: {
+            'type': 'rect',
+            'stroke': 'none'
+          }
         }
+      },
+  
+    });
+  
+    var link1 = new joint.shapes.examples.CustomLink();
+  
+    link1.source(entity1);
+    link1.target(attri11);
+    link1.addTo(graph);
+  
+  
+  
+    var link2 = new joint.shapes.examples.CustomLink();
+  
+    link2.source(entity1);
+    link2.target(attri12);
+    link2.addTo(graph);
+  
+    var link3 = new joint.shapes.examples.CustomLink();
+  
+    link3.source(entity1);
+    link3.target(attri13);
+    link3.addTo(graph);
+  
+    var link4 = new joint.shapes.examples.CustomLink();
+  
+    link4.source(entity1);
+    link4.target(attri14);
+    link4.addTo(graph);
+  
+    var link5 = new joint.shapes.examples.CustomLink();
+  
+    link5.source(entity1);
+    link5.target(attri15);
+    link5.addTo(graph);
+  
+    var link6 = new joint.shapes.examples.CustomLink();
+  
+    link6.source(entity1);
+    link6.target(attri16);
+    link6.addTo(graph);
+  
+  
+    var link7 = new joint.shapes.examples.CustomLink();
+  
+    link7.source(entity2);
+    link7.target(attri21);
+    link7.addTo(graph);
+  
+    var link8 = new joint.shapes.examples.CustomLink();
+  
+    link8.source(entity2);
+    link8.target(attri22);
+    link8.addTo(graph);
+  
+  
+  
+  
+  
+  
+  
+    var link7 = new joint.shapes.examples.CustomLink();
+    link7.source(entity1);
+    link7.target(diamondrel);
+    link7.addTo(graph);
+    link7.appendLabel({
+      attrs: {
+        text: {
+          text: arrconstrt[0],
+          fontSize: 16
+        }
+  
       }
-    },
-
-  });
-
-  var link1 = new joint.shapes.examples.CustomLink();
-
-  link1.source(entity1);
-  link1.target(attri11);
-  link1.addTo(graph);
-
-
-
-  var link2 = new joint.shapes.examples.CustomLink();
-
-  link2.source(entity1);
-  link2.target(attri12);
-  link2.addTo(graph);
-
-  var link3 = new joint.shapes.examples.CustomLink();
-
-  link3.source(entity1);
-  link3.target(attri13);
-  link3.addTo(graph);
-
-  var link4 = new joint.shapes.examples.CustomLink();
-
-  link4.source(entity1);
-  link4.target(attri14);
-  link4.addTo(graph);
-
-  var link5 = new joint.shapes.examples.CustomLink();
-
-  link5.source(entity1);
-  link5.target(attri15);
-  link5.addTo(graph);
-
-  var link6 = new joint.shapes.examples.CustomLink();
-
-  link6.source(entity1);
-  link6.target(attri16);
-  link6.addTo(graph);
-
-
-  var link7 = new joint.shapes.examples.CustomLink();
-
-  link7.source(entity2);
-  link7.target(attri21);
-  link7.addTo(graph);
-
-  var link8 = new joint.shapes.examples.CustomLink();
-
-  link8.source(entity2);
-  link8.target(attri22);
-  link8.addTo(graph);
-
-
-
-
-
-
-
-  var link7 = new joint.shapes.examples.CustomLink();
-  link7.source(entity1);
-  link7.target(diamondrel);
-  link7.addTo(graph);
-  link7.appendLabel({
-    attrs: {
-      text: {
-        text: arrconstrt[0],
-        fontSize: 16
+    });
+    link7.addTo(graph);
+  
+  
+  
+  
+    var link8 = new joint.shapes.examples.CustomLink();
+  
+    link8.source(entity2);
+    link8.target(diamondrel);
+    link8.addTo(graph);
+    link8.appendLabel({
+      attrs: {
+        text: {
+          text: arrconstrt[2],
+          fontSize: 16
+        }
+  
       }
-
-    }
-  });
-  link7.addTo(graph);
-
-
-
-
-  var link8 = new joint.shapes.examples.CustomLink();
-
-  link8.source(entity2);
-  link8.target(diamondrel);
-  link8.addTo(graph);
-  link8.appendLabel({
-    attrs: {
-      text: {
-        text: arrconstrt[2],
-        fontSize: 16
-      }
-
-    }
-  });
-  link8.addTo(graph);
+    });
+    link8.addTo(graph);*/
 
 }
 
