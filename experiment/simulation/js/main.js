@@ -635,7 +635,7 @@ function removerowa(btndel) {
 
 }
 
-
+/**************** Draw ER modeling diagram  *************/
 
 function drawbtnex21() {
 

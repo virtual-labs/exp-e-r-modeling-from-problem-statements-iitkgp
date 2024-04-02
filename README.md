@@ -39,9 +39,8 @@ In this experiment we will learn how to find the entities, its attributes and ho
 
 SrNo | Name | VLabs Developer or Integration Engineer | Department| Institute
 :--|:--|:--|:--|:--|
-1 | **Prakriti Dhang** | Developer & Integration |  Department of Mechanical Engineering | IIT Kharagpur |
-2 | **Barun Kumar Saha** | Developer |  Department of Mechanical Engineering | IIT Kharagpur | 
-3 | **Tuhin Chakrabarty** | Developer |  Department of Mechanical Engineering | IIT Kharagpur | 
-4 | **Bibudhendu Pati** | Developer |  Department of Mechanical Engineering | IIT Kharagpur | 
-
+1 | **Barun Kumar Saha** | Developer |  Department of Mechanical Engineering | IIT Kharagpur | 
+2 | **Tuhin Chakrabarty** | Developer |  Department of Mechanical Engineering | IIT Kharagpur | 
+3 | **Bibudhendu Pati** | Developer |  Department of Mechanical Engineering | IIT Kharagpur | 
+4 | **Prakriti Dhang** | Developer & Integration |  Department of Mechanical Engineering | IIT Kharagpur |
 
