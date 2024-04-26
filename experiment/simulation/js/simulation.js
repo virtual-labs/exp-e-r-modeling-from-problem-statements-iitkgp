@@ -1044,8 +1044,10 @@ function gostep5(){
 
 
 function replaybtn(){
-    //location.reload();
-    playsimulation();
+    location.reload();
+    //document.getElementById("playbtn").disabled=false;
+    //document.getElementById("replaybtn").disabled=true;
+   /* playsimulation();
     document.getElementById("replaybtn").disabled=true;
     document.getElementById("p2").style.display="none";
     document.getElementById("p3").style.display="none";
@@ -1061,6 +1063,6 @@ function replaybtn(){
     document.getElementById("p12").style.display="none";
     document.getElementById("p13").style.display="none";
     document.getElementById("p14").style.display="none";
-    document.getElementById("p15").style.display="none";
+    document.getElementById("p15").style.display="none";*/
 
 }
