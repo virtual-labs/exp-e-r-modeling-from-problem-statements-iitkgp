@@ -1,0 +1,38 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": " An entity set could be related to itself",
+      "answers": {
+        "a": "True",
+        "b": "False "
+      },
+      
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "A prime attributes is indicated by",
+      "answers": {
+        "a": "Underline inside an ellipse ",
+        "b": "Double ellipse ",
+        "c": "Dotted ellipse ",
+        "d": "Dotted rectangle "
+       
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Students study in schools -- this is a",
+      "answers": {
+        "a": "1:1 mapping ",
+        "b": "1:N mapping  ",
+        "c": "M:1 mapping ",
+        "d": "M:N mapping "
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    }
+  ]
+}
